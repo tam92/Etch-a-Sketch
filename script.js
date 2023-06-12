@@ -6,5 +6,10 @@ let container = document.getElementById('container');
 for (let i = 0; i < 256; i++) {
     let newDiv = document.createElement('div');
     newDiv.classList.add('square');
+    const hoveredSquare = 
+    newDiv.addEventListener('mouseover', (e) => {
+        console.log("mouse");
+        newDiv.classList.add('hover');
+    } );
     container.appendChild(newDiv);
 }

@@ -3,7 +3,6 @@ body {
     justify-content: center;
 }
 
-
 #container {
     display: flex;
     flex-wrap: wrap;
@@ -14,4 +13,8 @@ body {
 .square {
     flex-basis: 6%;
     background-color: beige;
+}
+
+.hover {
+    background-color: black;
 }
