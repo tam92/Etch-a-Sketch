@@ -24,14 +24,13 @@ for (let i = 0; i < 256; i++) {
     newDiv.classList.add('square');
     const hoveredSquare = 
     newDiv.addEventListener('mouseover', (e) => {
-        newDiv.classList.add('hover');
+        newDiv.style.backgroundColor = generateRandomRGB();
     } );
     container.appendChild(newDiv);
 }
 
 function createGrid(sideSquares) {
     let children = document.getElementById('container');
-
     // removes the previous grid from container
     while (children.firstChild) {
         container.removeChild(container.firstChild);
@@ -49,4 +48,8 @@ function createGrid(sideSquares) {
         } );
         container.appendChild(newDiv);
     }
+}
+
+function generateRandomRGB() {
+    return '#' + Math.floor(Math.random()*16777215).toString(16).padStart(6, '0');
 }
