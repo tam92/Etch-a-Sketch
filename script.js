@@ -44,7 +44,7 @@ function createGrid(sideSquares) {
         newDiv.style.flexBasis = `${960/sideSquares}px`;
         const hoveredSquare = 
         newDiv.addEventListener('mouseover', (e) => {
-            newDiv.classList.add('hover');
+            newDiv.style.backgroundColor = generateRandomRGB();
         } );
         container.appendChild(newDiv);
     }
